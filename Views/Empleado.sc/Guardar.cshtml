@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "Guadar";
+}
+
+<form class="row justify-content-center">
+    <div class="col-12 text-center mt-4">
+        <h2>Guardar Empleado</h2>
+        <hr />
+    </div>
+
+    <div class="col-4">
+        <label>Digite el Empleado</label>
+        <input type="text" class="form-control" id="NombreEmpleado" name="NombreEmpleado" />
+    </div>
+    <div class="w-100"></div>
+    <div class="col-4 mt-3 text-center">
+        <button id="btnGuardarEmpleado" class="btn btn-primary">Guardar</button>
+        <a href="/Empleado/index" class="btn btn-danger">Cancelar</a>
+    </div>
+</form>
+
+@section scripts {
+    <script src="~/Scripts/scriptsEmpleados.js"></script>
+    <script>
+        $("#btnGuardarEstado").click(function () {
+            GuardarEmpleado();
+            return false;
+        });
+    </script>
+}
+
+	
